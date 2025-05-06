@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        /* General page styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(45deg, #ff6ec7, #f5a623); /* Soft pink to orange gradient */
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Login container card styles */
+        .login-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #2C3E50; /* Dark blue for the title */
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 2px solid #dcdfe1;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+            background-color: #f7f9fc;
+        }
+
+        .input-field:focus {
+            border-color: #ff6ec7; /* Pink color on focus */
+            outline: none;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: #8e44ad; /* Purple color for the button */
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .login-btn:hover {
+            background-color: #732d91; /* Darker purple on hover */
+        }
+
+        .forgot-password {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .forgot-password a {
+            text-decoration: none;
+            color: #8e44ad; /* Same purple as the button */
+            transition: color 0.3s ease;
+        }
+
+        .forgot-password a:hover {
+            color: #732d91; /* Darker purple on hover */
+        }
+
+        /* Responsive styles */
+        @media (max-width: 500px) {
+            .login-container {
+                padding: 20px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+            .input-field, .login-btn {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="/login" method="POST">
+            <input type="text" name="username" class="input-field" placeholder="Username" required><br>
+            <input type="password" name="password" class="input-field" placeholder="Password" required><br>
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+        <div class="forgot-password">
+            <a href="#">Forgot Password?</a>
+        </div>
+    </div>
+
+</body>
+</html>
